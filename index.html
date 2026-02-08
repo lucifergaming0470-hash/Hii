@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Rutu ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  height:100vh;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(to bottom,#fff1f5,#ffe4ec);
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.page{display:none;width:100%;height:100%;justify-content:center;align-items:center}
+.page.active{display:flex}
+.card{
+  background:rgba(255,255,255,0.96);
+  width:90%;max-width:420px;
+  padding:30px;border-radius:20px;
+  text-align:center;
+  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+  animation:fadeIn .8s ease;
+}
+h1{font-family:'Great Vibes',cursive;font-size:42px;color:#c2185b}
+h2{font-family:'Playfair Display',serif;color:#880e4f}
+p{font-size:15px;color:#444;margin:20px 0}
+img{width:100%;border-radius:15px;margin-bottom:20px}
+button{
+  padding:12px 28px;font-size:15px;border:none;
+  border-radius:30px;cursor:pointer;margin:10px
+}
+.next,.yes{background:#e91e63;color:#fff}
+.no{background:#eee;color:#333}
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(25px)}
+  to{opacity:1;transform:translateY(0)}
+}
+audio{display:none}
+.letter {
+  background: #fffdf7;
+  border: 1px solid #e6d8c3;
+  padding: 25px 22px;
+  border-radius: 10px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #3b2f2f;
+  box-shadow: inset 0 0 0 1px #f3e7d3,
+              0 10px 25px rgba(0,0,0,0.15);
+  text-align: left;
+}
+
+.letter h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.signature {
+  margin-top: 25px;
+  font-size: 22px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="page active" id="p1">
+  <div class="card">
+    <h1>Hey Rutu 💕</h1>
+    <img src="page1.gif">
+    <p>You quietly became my favourite thought every day.</p>
+    <button class="next" onclick="go('p2')">Next ➝</button>
+  </div>
+</div>
+
+<div class="page" id="p2">
+  <div class="card">
+    <h2>Something From My Heart…</h2>
+    <img src="page2.gif">
+    <p>You make simple moments feel special just by being there.</p>
+    <button class="next" onclick="go('p3')">Next ➝</button>
+  </div>
+</div>
+
+<div class="page" id="p3">
+  <div class="card">
+    <h2>Rutu 💖</h2>
+    <img src="page3.gif">
+    <p style="font-size:18px;">Will you be my Valentine?</p>
+    <button class="yes" onclick="yes()">YES 💕</button>
+    <button class="no" onclick="go('pNo')">NO 😒</button>
+  </div>
+</div>
+
+<div class="page" id="pNo">
+  <div class="card">
+    <h2>Excuse Me, Madam 😤</h2>
+    <img src="page5.gif">
+    <p>Galat button dab gaya lagta hai 😌<br>Ab press YES 💖</p>
+    <button class="yes" onclick="yes()">YES 💕</button>
+  </div>
+</div>
+
+<div class="letter">
+  <h3>My Dearest Rutu,</h3>
+
+  Thank you for being my <i>first love</i>, my <i>first kiss</i>,
+  and my <i>first partner</i> in this beautiful journey of life.<br><br>
+
+  With you, everything feels more real and meaningful.
+  I want to be with you till my <b>last breath</b>,
+  and I want to see you happy — with me —
+  as we spend our coming days, weeks, and years together.<br><br>
+
+  I love you for who you are,
+  the way you behave,
+  and the kisses we share that make my world stop for a moment.<br><br>
+
+  I don’t want a perfect story.
+  I just want <b>you</b>.
+  Only you.
+  For the rest of my life.
+
+  <div class="signature">
+    Yours, and only yours,<br>
+    <b>Aditya ❤️</b>
+  </div>
+</div>
+
+<script>
+function go(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function yes(){
+  go('p4');
+  setTimeout(()=>{
+    window.location.href=
+    "https://wa.me/91XXXXXXXXXX?text=I%20said%20YES%20💖%20—%20Rutu";
+  },1500);
+}
+</script>
+
+</body>
+</html>
